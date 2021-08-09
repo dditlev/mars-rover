@@ -1,0 +1,31 @@
+{
+  "name": "perseverance-rover-api-experience",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "npx babel --watch client --ignore '**/*.test.js','**/testapp.js' --out-dir server/dist",
+    "build": "npx babel client --ignore '**/*.test.js','**/testapp.js' --out-dir server/dist",
+    "start": "PORT=8080 node server/run.js"
+  },
+  "author": "Ditlev Tøjner",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-jest": "^27.0.6",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "jest": "^27.0.6",
+    "react-test-renderer": "^17.0.2",
+    "supertest": "^6.1.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "multistream": "^4.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
