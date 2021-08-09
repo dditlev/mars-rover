@@ -1,6 +1,5 @@
 import fetchStream from "./fetchStream.js";
 import useKeypress from "./useKeypress.js";
-// import React from 'react';
 /**
  * Wraps a hoverable overlay on slide images to show metadata
  * @param {React.Node} props.content the content to show on hover
