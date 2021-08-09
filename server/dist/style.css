@@ -1,0 +1,106 @@
+body {
+  background-color: #222;
+  background-image: url("https://berlingske.bmcdn.dk/media/cache/resolve/image_x_large/image/142/1422040/23746167-mars-perseverance---202105151.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+#app {
+  height: 100vh;
+  box-shadow: inset -1000px -1000px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+.slide-show {
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  text-align: center;
+}
+.slide-show > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 225ms;
+  overflow: hidden;
+}
+.slide-show > * > img {
+  max-width: 101%;
+  height: auto;
+  transform: scale(1.1);
+}
+.slideshow-app {
+  height: inherit;
+}
+.slideshow-app > section {
+  max-width: 75%;
+  margin: 0 auto;
+  transform: translateY(5vh);
+}
+.slideshow-app > header {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  text-align: center;
+  width: 100%;
+}
+.slideshow-app > header > h1 {
+  color: #fff;
+  font-size: 0.8rem;
+  margin: 0;
+}
+.image-overlay {
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  z-index: inherit;
+}
+.image-overlay img {
+  max-height: 90vh;
+  width: auto;
+  margin: 0.66em auto;
+}
+.image-overlay > .image-overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  transition: 225ms;
+}
+.image-overlay > .image-overlay-content > div {
+  background-color: rgba(34, 34, 34, 0.603);
+  width: 33.33%;
+  margin: 0 auto;
+  padding: 2em 1em 2em 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #222;
+  transform: scale(1.2);
+  column-count: 2;
+}
+.image-overlay > .image-overlay-content > div > h3 {
+  font-size: 0.8rem;
+  margin-bottom: 1em;
+}
+.image-overlay:not(:hover) > .image-overlay-content {
+  bottom: -46vh;
+}
+@media screen and (max-width: 768px) {
+  .slideshow-app > section {
+    max-width: 100%;
+  }
+  .image-overlay {
+    height: initial;
+  }
+  .image-overlay img {
+    max-height: 47vh;
+  }
+  .image-overlay > .image-overlay-content > div {
+    width: 50%;
+  }
+  }
