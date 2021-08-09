@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+server/dist/app.js
+server/dist/fetchStream.js
+server/dist/index.js
+server/dist/useKeypress.js
